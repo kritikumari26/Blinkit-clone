@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blinkit Clone</title>
+    
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav h1 {
+    color: #e6b800;
+    font-size: 35px;
+}
+
+nav p {
+    font-size: 12px;
+}
+
+input {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    flex: 1 1 220px;
+    max-width: 300px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Banner */
+.banner {
+    background: #138b38;
+    color: white;
+    margin-top: 25px;
+    padding: 30px;
+    min-height: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.banner h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.banner h2 {
+    font-size: 18px;
+    width: 550px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.banner img {
+    width: 35%;
+    min-width: 220px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Offers */
+.offers {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: calc(33.33% - 10px);
+    min-width: 220px;
+    height: 180px;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 260px;
+}
+
+.box h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    margin-bottom: 15px;
+}
+
+.blue {
+    background: linear-gradient(135deg, #15bdc5, #0e9fb2);
+}
+
+.box img {
+    display: block;
+    width: 100px;
+    height: 90px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-top: 12px;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.18));
+}
+
+.yellow {
+    background: #ffcc00;
+}
+
+.light {
+    background: #b9d9e8;
+}
+
+/* Categories */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(80px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.categories div {
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.categories img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.categories p {
+    font-size: 12px;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    .categories {
+        grid-template-columns: repeat(5, minmax(90px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    nav {
+        padding: 15px;
+    }
+
+    .banner {
+        padding: 20px;
+    }
+
+    .banner h1 {
+        font-size: 28px;
+    }
+
+    .banner h2 {
+        font-size: 16px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+}
+</style>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h1>blinkit</h1>
+        <div>
+            <h3>Delivery in 17 minutes</h3>
+            <p>Near your location</p>
+        </div>
+        <input type="text" placeholder="Search Chocolate">
+        <button>Login</button>
+        <button>My Cart</button>
+    </nav>
+
+    
+    <div class="banner">
+        <div>
+            <h1>Stock up on daily essentials</h1>
+            <h2>Get farm-fresh goodness & , vegetables, eggs & more</h2>
+            <button>Shop Now</button>
+        </div>
+        <img src="https://img.magnific.com/free-photo/mixed-fruits-with-apple-banana-orange-other_74190-938.jpg">
+    </div>
+
+    <!-- Three Offers -->
+    <div class="offers">
+
+        <div class="box blue">
+            <h2>Pharmacy at your doorstep!</h2>
+            <p>Get medicines and more</p>
+            <button>Order Now</button>
+        </div>
+
+        <div class="box yellow">
+            <h2>Pet care supplies at your door</h2>
+            <p>Food, treats, toys & more</p>
+            <button>Order Now</button>
+        </div>
+
+        <div class="box light">
+            <h2>No time for a diaper run?</h2>
+            <p>Get baby care essentials</p>
+            <button>Order Now</button>
+        </div>
+
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+
+        <div><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=150"><p>Pan Corner</p></div>
+
+        <div><img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=150"><p>Dairy, Bread & Eggs</p></div>
+
+        <div><img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=150"><p>Fruits & Vegetables</p></div>
+
+        <div><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=150"><p>Cold Drinks & Juices</p></div>
+
+        <div><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=300&q=80"><p>Snacks & Munchies</p></div>
+
+        <div><img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=150"><p>Breakfast & Instant Food</p></div>
+
+        <div><img src="https://images.unsplash.com/photo-1581798459219-318e76aecc7b?w=150"><p>Sweet Tooth</p></div>
+
+        <div><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150"><p>Bakery & Biscuits</p></div>
+
+        <div><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=150"><p>Tea & Coffee</p></div>
+
+        <div><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=150"><p>Atta, Rice & Dal</p></div>
+
+    </div>
+
+</body>
+</html>
